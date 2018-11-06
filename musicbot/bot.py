@@ -271,7 +271,7 @@ class MusicBot(discord.Client):
                 try:
                     print("接続を確立しています・・・")
                     await asyncio.wait_for(voice_client.connect(), timeout=10, loop=self.loop)
-                    print("接続を確立しました。.")
+                    print("接続を確立しました。")
                     break
                 except:
                     traceback.print_exc()
@@ -746,7 +746,7 @@ class MusicBot(discord.Client):
                     print("自動プレイリスト再生を開始します。。。")
                     await self.on_player_finished_playing(await self.get_player(owner_vc))
             else:
-                print("オーナーが参加中のボイスチャンネルはありませんでした、自動参加に失敗しました。")
+                print("オーナーが参加中のボイスチャンネルはありませんでした。自動参加に失敗しました。")
 
         print()
         # t-t-th-th-that's all folks!
